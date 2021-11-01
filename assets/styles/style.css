@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+   font-family: "Monserrat", sans-serif;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+}
+ 
+h2, h3 {
+   color: #45A29E;
+}
+
+header {
+   font-family: "Open Sans", sans-serif;
+   display: inline;
+}
+
+.jumbotron {
+   font-size: 20px;
+   padding: 60px;
+   background-image: url('../image/header.jpg');
+   background-size: cover;
+   text-align: center;
+   color: #66FCF1;
+}
+
+.title{
+   font-size: 2em;
+}
+
+nav {
+   display: flex;
+   justify-content: space-between;
+   color: #66FCF1;
+   background-color: #1F2833;
+   padding: 5px;
+   position: sticky;
+   top: 0;
+}
+
+nav li {
+   display: inline;
+   list-style-type: none;
+   margin-right: 20px;
+}
+
+nav a {
+   font-size: 18px;
+   font-weight: 400;
+   text-decoration: none;
+   color: white;
+}
+
+nav a:hover {
+   font-weight: bold;
+   color: #45A29E;
+}
+
+.toggle-menu{
+   padding: 15px 0 0 0;
+   display: none;
+   flex-direction: column;
+   height: 35px;
+   justify-content: space-between;
+   position: relative;
+}
+
+.toggle-menu span{
+   display: block;
+   width: 30px;
+   height: 3px;
+   background-color: white;
+}
+
+.toggle-menu input:checked ~ span{
+   background-color: #45A29E;
+}
+
+.toggle-menu input{
+   top: 4px;
+   left: -9px;
+   width: 40px;
+   height: 30px;
+   position: absolute;
+   cursor: pointer;
+   opacity: 0;
+}
+
+.featured-image {
+   width: 50%;
+}
+
+.card {
+   border-radius: 10px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   background-color: #C5C6C7;
+   border-radius: 5px;
+   padding: 10px 30px 10px 30px;
+   margin-top: 20px;
+}
+
+main {
+   padding: 20px;
+   overflow: auto;
+}
+
+#content {
+   float: left;
+   width: 75%;
+} 
+
+#content p {
+   font-size: 18px;
+   text-align: justify;
+   text-justify: inter-word;
+} 
+
+aside {
+   float: right;
+   width: 25%;
+   padding-left: 20px;
+}
+
+textarea{
+   height: 20px;
+   width: 100%;
+   border: none;
+   border-bottom: 2px solid #aaa;
+   background-color: transparent;
+   margin-bottom: 10px;
+   resize: none;
+   outline: none;
+   transition: .5s;
+}
+
+.profile {
+   text-align: center;
+}
+
+.profile img {
+   width: 100%;
+}
+
+button{
+   color: white;
+   background-color: #45A29E;
+   border-radius: 12px;
+   border: none;
+   cursor: pointer;
+   padding: 4px 10px;
+}
+
+button:hover {
+   font-weight: bold;
+}
+
+nav button{
+   font-family: "Open Sans", sans-serif;
+   position: absolute;
+   top: 8px;
+   padding: 6px 2px;
+   right: 20px;
+   width: 80px;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+footer {
+   font-family: "Open Sans", sans-serif;
+   padding: 20px;
+   color: #66FCF1;
+   background-color: #1F2833;
+   text-align: center;
+   font-weight: bold;
+   font-size: 20px;
+}
+
+.darkmode{
+   background-color: #0B0C10;  
+}
+
+@media screen and (max-width: 1250px) {
+   #content,
+   aside {
+       width: 100%;
+       padding: 0;
+   }
+   .profile img{
+      width: 200px;
+   }
+   body {
+      font-size: 0.9em;
+   }
+}
+
+/* untuk ipad/tablet */
+@media screen and (max-width: 768px) {
+   .featured-image {
+      width: 100%;
+   }
+   nav ul{
+      width: 70%;
+   }
+}
+
+/* untuk mobile */
+@media screen and (max-width: 576px) {
+   nav ul{
+      font-weight: bold;
+      width: 50%;
+   }
+   nav button{
+      top: 5px;
+      padding: 6px 2px;
+      right: 65px;
+      width: 80px;
+   }
+   nav button:hover{
+      text-decoration: underline;
+      font-weight: normal;
+   }
+   nav .menu-bar{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      right: 0;
+      top: 50px;
+      height: 40vh;
+      width: 100%;
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: #1F2833;
+      z-index: -1;
+      opacity: 0.5;
+      transform: translateX(100%);
+   }
+   nav .menu-bar.slide{
+      transform: translateX(0);
+      transition: all 1s;
+      opacity: 1;
+   }
+   .toggle-menu{
+      display: flex;
+      left: -15px;
+   }
+   .logo{
+      top: 16px;
+      position: absolute;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 3px;
+   }
+}
+
+@media screen and (max-width: 400px) {
+   .profile img{
+      width: 100%;
+   }
+}
+
+html{
+   scroll-behavior: smooth;
+}
